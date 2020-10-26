@@ -2,6 +2,7 @@ import {
   makeObservable, observable, action, computed,
 } from 'mobx';
 import agent from '../agent';
+import error from './error';
 
 class Repositories {
   constructor() {
@@ -60,8 +61,9 @@ class Repositories {
         forks: repository.forks,
         languages,
       });
-      // eslint-disable-next-line no-empty
-    } catch (e) {}
+    } catch (e) {
+      error.setError(e);
+    }
   }
 }
 

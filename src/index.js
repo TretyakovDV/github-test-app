@@ -6,9 +6,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import repositories from './stores/repositories';
+import error from './stores/error';
+import details from './stores/details';
 
 const stores = {
   repositories,
+  error,
+  details,
 };
 
 ReactDOM.render(

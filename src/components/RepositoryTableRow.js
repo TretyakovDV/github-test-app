@@ -21,7 +21,7 @@ const RepositoryTableRow = ({
       <TableCell width={250}>{title}</TableCell>
       <TableCell width={100} align="right">{stars}</TableCell>
       <TableCell align="center">
-        <IconButton onClick={handleDetails}>
+        <IconButton onClick={handleDetails} data-testid="details">
           <SubjectIcon />
         </IconButton>
       </TableCell>
@@ -31,7 +31,7 @@ const RepositoryTableRow = ({
         </IconButton>
       </TableCell>
       <TableCell align="center">
-        <IconButton onClick={handleDelete}>
+        <IconButton onClick={handleDelete} data-testid="delete">
           <DeleteIcon />
         </IconButton>
       </TableCell>
@@ -40,10 +40,7 @@ const RepositoryTableRow = ({
 };
 
 RepositoryTableRow.propTypes = {
-  id: PropTypes.oneOf([
-    PropTypes.string.isRequired,
-    PropTypes.number.isRequired,
-  ]).isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,

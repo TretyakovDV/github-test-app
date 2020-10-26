@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddRepositoryForm matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      placeholder="facebook/react"
+      type="text"
+      value="facebook/react"
+    />
+    <button
+      type="button"
+    >
+      Add
+    </button>
+  </div>
+</DocumentFragment>
+`;

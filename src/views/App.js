@@ -11,10 +11,10 @@ import {
   TableFooter,
 } from '@material-ui/core';
 
-import AddRepositoryForm from './components/AddRepositoryForm';
-import RepositoryTableRow from './components/RepositoryTableRow';
-import Notification from './components/Notification';
-import Details from './components/Details';
+import AddRepositoryForm from '../components/AddRepositoryForm';
+import RepositoryTableRow from '../components/RepositoryTableRow';
+import Notification from '../components/Notification';
+import Details from '../components/Details';
 
 const App = inject('repositories', 'details')(observer(({ repositories, details }) => {
   const { list } = repositories;

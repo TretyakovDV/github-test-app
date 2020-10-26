@@ -18,7 +18,7 @@ const Details = inject('details', 'repositories')(observer(({ details, repositor
   return (
     <Paper elevation={10} className="details">
       <div>
-        <IconButton onClick={handleClose}>
+        <IconButton onClick={handleClose} data-testid="close">
           <CloseIcon />
         </IconButton>
       </div>
@@ -45,7 +45,11 @@ const Details = inject('details', 'repositories')(observer(({ details, repositor
       <Typography variant="h4" className="mt-40 mb-20">Languages</Typography>
       <div className="languages-container">
         {languages.map((lang) => (
-          <Chip key={lang.label} label={`${lang.label} - ${Number(lang.percent).toFixed(4)}%`} className="languages__item" />
+          <Chip
+            key={lang.label}
+            label={`${lang.label} - ${Number(lang.percent).toFixed(4)}%`}
+            className="languages__item"
+          />
         ))}
       </div>
     </Paper>
